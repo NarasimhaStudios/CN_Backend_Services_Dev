@@ -191,7 +191,9 @@ public class UIManager : MonoBehaviour
                     BackendManager.Database.RootReference.Child("friends").Child(user.Id).Child(id).SetValueAsync(1);
                     BackendManager.Database.RootReference.Child("friends").Child(id).Child(user.Id).SetValueAsync(1);
                     BackendManager.Database.RootReference.Child("requestsFrom").Child(id).Child(user.Id).RemoveValueAsync();
+                    BackendManager.Database.RootReference.Child("requestsFrom").Child(user.Id).Child(id).RemoveValueAsync();
                     BackendManager.Database.RootReference.Child("requestsTo").Child(id).Child(user.Id).RemoveValueAsync();
+                    BackendManager.Database.RootReference.Child("requestsTo").Child(user.Id).Child(id).RemoveValueAsync();
                 }
             });
             }
